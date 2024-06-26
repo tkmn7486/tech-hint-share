@@ -12,6 +12,7 @@ import dayjs from 'dayjs';
 import utc from 'dayjs/plugin/utc';
 import timezone from 'dayjs/plugin/timezone';
 import axios from 'axios';
+import { Separator } from '@/components/ui/separator';
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
@@ -48,8 +49,10 @@ export const PostsList=()=>{
                 <Loading /> :
             <>
                 {Posts.length === 0 ? <p className={style["no-article-text"]}>記事がありません</p> : (
+                    <>
                     <div className={style["card-box"]}>
                         {Posts.map((post:Post) =>(
+                            <>
                             <Link to={`/posts/${post._id}`} key={post._id}>
                                 <div className={style["post-card"]}>
                                     <div className={style["created-at"]}>
@@ -68,10 +71,13 @@ export const PostsList=()=>{
                                         </div>
                                     </div>
                                 </div>
-                            </Link>   
+                            </Link>
+                            <Separator />
+                            </>
                             )
                         )}
                     </div>
+                    </>
                 )}
             </>
             }

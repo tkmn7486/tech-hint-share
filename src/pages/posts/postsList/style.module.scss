@@ -18,15 +18,13 @@
 
 .post-card{
     padding: 0.5rem;
-    margin: 1rem 0;
-    border-bottom: solid 1px var.$color-third;
     .bottom-list {
         display: flex;
         justify-content: space-between;
+        margin-top: 0.5rem;
+        color: var.$color-third;
 
         .link-amount {
-            color: var.$color-third;
-
             .link-icon {
                 display: inline-block;
                 margin-right: 0.2rem;

@@ -3,6 +3,8 @@ import { Loading } from "@/pages/misc/loading"
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { Badge } from "@/components/ui/badge"
+import { RiThumbUpLine } from "react-icons/ri";
+import { RiThumbUpFill } from "react-icons/ri";
 
 import style from "./style.module.scss"
 import axios from 'axios';
@@ -80,7 +82,7 @@ export const PostsDetail=()=>{
             <>
                 <div>
                     <div className={style["badge-box"]}>
-                        <Badge className={style.badge}>{post.category}</Badge>
+                        <Badge className={style.badge} variant={"outline"}>{post.category}</Badge>
                     </div>
                 </div>
                 <div className={style.content}>{parse(post.content)}</div>
@@ -100,6 +102,10 @@ export const PostsDetail=()=>{
                                 </ul>
                         </Card>
                     }
+                    <Badge className={style.badge} variant={"outline"}>
+                        <RiThumbUpLine className={style["badge-like-icon"]}/>
+                        <label>{post.like}</label>
+                    </Badge>
                     <div className={style["updated-at"]}>
                         <Label>最終更新日：{dayjs.utc(post._updated_at).tz('Asia/Tokyo').format('YYYY-MM-DD')}</Label>
                     </div>

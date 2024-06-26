@@ -3,6 +3,9 @@ import style from "./style.module.scss"
 
 import { Label } from "@/components/ui/label"
 import { Separator } from "@/components/ui/separator"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { PostsList } from "@/pages/posts/postsList"
+
 
 
 type menu = {
@@ -17,8 +20,8 @@ export const Header = () => {
     console.log("param:", params)
 
     const siteMenu:menu[] = [
-        {label: "Timeline", path: "/posts?filter=latest"},
-        {label: "Article", path: "/articles?filter=latest"},
+        {label: "Post", path: "/posts?filter=latest"},
+        {label: "Note", path: "/notes?filter=latest"},
     ]
     
     return (
