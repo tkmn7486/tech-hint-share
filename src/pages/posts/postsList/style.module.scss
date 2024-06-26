@@ -51,11 +51,7 @@
 
 @media screen and (min-width: 960px) {
     .card-box {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
         .post-card {
-            width: 45vw;
             .title {
                 font-size: 1.2rem;
             }

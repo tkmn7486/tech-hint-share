@@ -15,7 +15,7 @@ function Router() {
         <Header />
         <div className="Routes">
           <Routes>
-            <Route path="/" element={<ArticleList />} />
+            <Route path="/" element={<PostsList />} />
             <Route path="/posts" element={<PostsList />} />
             <Route path="/posts/:id" element={<PostsDetail/>} />
             <Route path="/notes" element={<ArticleList />} />
