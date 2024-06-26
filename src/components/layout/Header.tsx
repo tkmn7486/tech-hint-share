@@ -17,11 +17,8 @@ export const Header = () => {
     console.log("param:", params)
 
     const siteMenu:menu[] = [
-        {label: "Latest", path: "/posts/latest"},
-        {label: "Tech", path: "/posts/tech"},
-        {label: "Design", path: "/posts/design"},
-        {label: "Business", path: "/posts/business"},
-        {label: "other", path: "/posts/esc"},
+        {label: "Timeline", path: "/posts?filter=latest"},
+        {label: "Article", path: "/articles?filter=latest"},
     ]
     
     return (

@@ -1,8 +1,7 @@
 import parse from 'html-react-parser';
 import { Loading } from "@/pages/misc/loading"
-import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
-import {client} from "@/lib/client"
+import { useState } from "react"
+// import { useParams } from "react-router-dom"
 import { Badge } from "@/components/ui/badge"
 
 import style from "./style.module.scss"
@@ -22,8 +21,8 @@ type Article = {
 }
 
 export const ArticleDetail=()=>{
-    const [isLoading, setIsLoading] = useState(true)
-    const [article, setArticle] = useState<Article>(
+    const [isLoading] = useState(true)
+    const [article] = useState<Article>(
         {
             id:"",
             title:"",
@@ -37,29 +36,6 @@ export const ArticleDetail=()=>{
             url:undefined
         }
     )
-
-    const params = useParams()
-
-    const articleID:string = params.id?.toString() || ""
-
-    useEffect(()=>{
-            const getData=async()=>{
-                setIsLoading(true)
-                await client.get({
-                    endpoint: 'blogs',
-                    queries: {
-                        limit: 1,
-                        ids: articleID
-                    }
-                })
-                .then((res) => {
-                    console.log(res.contents[0])
-                    setArticle(res.contents[0])
-                    setIsLoading(false)
-                });
-            }
-            getData()
-    },[])
 
     return (
         <div>

@@ -1,0 +1,64 @@
+@use "../../../style/var.scss";
+
+.page-label {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var.$color-first;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.no-article-text {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    font-weight: bold;
+    color: var.$color-first;
+}
+
+.post-card{
+    padding: 0.5rem;
+    margin: 1rem 0;
+    border-bottom: solid 1px var.$color-third;
+    .bottom-list {
+        display: flex;
+        justify-content: space-between;
+
+        .link-amount {
+            color: var.$color-third;
+
+            .link-icon {
+                display: inline-block;
+                margin-right: 0.2rem;
+            }
+        }
+    }
+    .title {
+        font-size: 1.0rem;
+        font-weight: bold;
+        color: var.$color-first;
+    }
+    .title-text {
+        white-space: nowrap; // 文字列を一行に保持
+        overflow: hidden; // コンテンツがコンテナを超えた場合に非表示にする
+        text-overflow: ellipsis; // はみ出したテキストを省略記号で置き換える
+    }
+    .created-at{
+        text-align: left;
+        color: var.$color-third;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .card-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .post-card {
+            width: 45vw;
+            .title {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

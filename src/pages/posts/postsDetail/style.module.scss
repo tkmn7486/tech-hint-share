@@ -1,0 +1,71 @@
+@use "../../../style/var.scss";
+
+.badge-box {
+
+    .badge {
+        margin-right: 10px;
+    }
+}
+
+.content {
+    margin: 1rem 0;
+    color: var.$color-first;
+
+    h2 {
+        font-size: 1.3rem;
+        font-weight: bold;
+        border-bottom: var.$color-first solid;
+        margin: 2rem 0 1rem 0;
+    }
+
+    li {
+        margin-left: 1rem;
+        list-style: square;
+    }
+
+    img {
+        margin: 1rem 0;
+        max-width: 1000px;
+        height: auto;
+    }
+}
+
+.link-box {
+    h2 {
+        font-size: 1.3rem;
+        font-weight: bold;
+        border-bottom: var.$color-first solid;
+        margin: 2rem 0 1rem 0;
+    }
+}
+
+.url-box {
+    margin: 1rem 0;
+    padding: 1rem;
+
+    li {
+        margin: 0.5rem 0;
+    }
+}
+
+.list-header {
+    display: inline-block;
+    color: var.$color-third;
+    margin-right: 0.5rem;
+}
+
+.url-label {
+    color: var.$color-third;
+    text-decoration: underline;
+    cursor:pointer;
+}
+
+.url-icon {
+    display: inline-block;
+    color: var.$color-third;
+    cursor:pointer;
+}
+
+.updated-at {
+    text-align: right;
+}
